@@ -72,9 +72,7 @@ def loadConfig():
             "SSL_VERIFY": False,
             "SSL_CERT": "/path/to/certificate",
             "AUTO_DEPLOY": False,
-            "SYNC_TOKEN":  0,
-            "WEBEX_ACCESS_TOKEN": "",
-            "WEBEX_ROOM_ID": "",
+            "SYNC_TOKEN":  0
         }
 
 # A function to store CONFIG_DATA to file
