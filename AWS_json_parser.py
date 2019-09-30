@@ -20,8 +20,6 @@ import sys
 import datetime
 import time
 import uuid
-#import ciscosparkapi
-import webexteamssdk
 
 # import supporting functions from additional file
 from Firepower import Firepower
