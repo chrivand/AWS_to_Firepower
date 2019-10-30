@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/chrivand/AWS_to_Firepower)
+
 # AWS_to_Firepower
 This is a sample script that parses AWS IP addresses and creates Network Group Objects in Firepower Management Center. 
 
