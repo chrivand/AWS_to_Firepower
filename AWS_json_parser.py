@@ -329,26 +329,6 @@ def WebServiceParser():
         # If the user wants us to deploy policies, then do it
         if CONFIG_DATA['AUTO_DEPLOY']:
             DeployPolicies(fmc)
-        
-        # if Webex Teams tokens set, then send message to Webex room
-        if CONFIG_DATA['WEBEX_ACCESS_TOKEN'] == '' or CONFIG_DATA['WEBEX_ROOM_ID'] == '':
-
-            # user feed back
-            sys.stdout.write("Webex Teams not set.\n")
-            sys.stdout.write("\n")
-        else:
-
-            # adjust the Webex message based on the config
-            if CONFIG_DATA['AUTO_DEPLOY']:
-                message_text = f"AWS IP addresses have been successfully updated for the {CONFIG_DATA['AWS_REGIONS']} plan and {CONFIG_DATA['AWS_SERVICES']} services! Firepower policy deployment was initiated..."
-            else:
-                message_text = f"AWS IP addresses have been successfully updated for the {CONFIG_DATA['AWS_REGIONS']} plan and {CONFIG_DATA['AWS_SERVICES']} services! Firepower policy deployment is required."
-
-            # instantiate the Webex handler with the access token
-            teams = webexteamssdk.WebexTeamsAPI(CONFIG_DATA['WEBEX_ACCESS_TOKEN'])
-
-            # post a message to the specified Webex room
-            message = teams.messages.create(CONFIG_DATA['WEBEX_ROOM_ID'], text=message_text)
 
     elif bool_new_version == False:
         # no new version, do nothing
